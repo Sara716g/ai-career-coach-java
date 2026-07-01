@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+ai-career-coach/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+target/
+build/
+dist/
+*.class
+*.jar
+*.war
+
+# Logs
+*.log
+logs/
+
+# Maven binary
+maven/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploaded files
+uploads/
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+
+# Database
+*.sql.bak
