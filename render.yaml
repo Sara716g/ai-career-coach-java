@@ -5,26 +5,6 @@ services:
     plan: free
     dockerfilePath: Dockerfile
     envVars:
-      - key: DB_HOST
-        fromDatabase:
-          name: ai-career-coach-db
-          property: host
-      - key: DB_PORT
-        fromDatabase:
-          name: ai-career-coach-db
-          property: port
-      - key: DB_NAME
-        fromDatabase:
-          name: ai-career-coach-db
-          property: database
-      - key: DB_USERNAME
-        fromDatabase:
-          name: ai-career-coach-db
-          property: user
-      - key: DB_PASSWORD
-        fromDatabase:
-          name: ai-career-coach-db
-          property: password
       - key: JWT_SECRET
         generateValue: true
       - key: SERVER_PORT
@@ -35,10 +15,7 @@ services:
         value: gemini
       - key: AI_API_KEY
         sync: false
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
     healthCheckPath: /actuator/health
     autoDeploy: true
-
-databases:
-  - name: ai-career-coach-db
-    plan: free
-    databaseName: ai_career_coach
