@@ -1,11 +1,10 @@
 [build]
-  base = "node:20"
-  publish = "frontend/dist"
-  command = "cd frontend && npm install && npm run build"
+  base = "frontend"
+  command = "npm install && npm run build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  VITE_API_URL = ""
 
 [[redirects]]
   from = "/*"
